@@ -1,0 +1,14 @@
+version: "3.2"
+services:
+  rabbit1:
+    image: "rabbitmq:3-management"
+    container_name: 'rabbitmq'
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+    labels:
+      NAME: "rabbitmq1"
+  database:
+    image: postgres:12
+    ports:
+      - 5432:5432
